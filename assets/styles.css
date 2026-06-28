@@ -1,0 +1,23 @@
+body {
+    background-color: #F4F7FE;
+}
+
+.main-title{
+    text-align:center;
+    font-size:60px;
+    font-weight:bold;
+    color:#4F46E5;
+}
+
+.tagline{
+    text-align:center;
+    font-size:22px;
+    color:#555;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0px 4px 10px rgba(0,0,0,0.1);
+}

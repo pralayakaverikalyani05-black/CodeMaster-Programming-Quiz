@@ -6,52 +6,78 @@ st.set_page_config(
     layout="wide"
 )
 
+# ---------- Custom CSS ----------
 st.markdown("""
-# 💻 CodeMaster
+<style>
+.main-title{
+    font-size:55px;
+    text-align:center;
+    color:#4F46E5;
+    font-weight:bold;
+}
 
-### AI-Powered Programming Quiz Platform
+.tagline{
+    text-align:center;
+    font-size:22px;
+    color:#555;
+}
 
-Welcome to **CodeMaster**.
+.card{
+    background:#F8F9FA;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:2px 2px 10px rgba(0,0,0,0.1);
+}
+</style>
+""", unsafe_allow_html=True)
 
-Improve your Programming Skills with interactive quizzes.
+st.markdown("<div class='main-title'>💻 CodeMaster</div>", unsafe_allow_html=True)
 
----
-""")
+st.markdown("<div class='tagline'>Learn Programming the Smart Way 🚀</div>", unsafe_allow_html=True)
+
+st.write("")
 
 col1, col2 = st.columns(2)
 
 with col1:
-    if st.button("🚀 Start Quiz", use_container_width=True):
-        st.info("Quiz module is coming soon!")
+    st.button("🚀 Start Quiz", use_container_width=True)
 
 with col2:
-    if st.button("👤 Login", use_container_width=True):
-        st.info("Login page is coming soon!")
+    st.button("👤 Login", use_container_width=True)
 
-st.markdown("---")
+st.write("")
+st.write("## 📚 Choose Your Subject")
 
-st.subheader("📚 Available Subjects")
+c1,c2,c3,c4 = st.columns(4)
 
-st.write("🐍 Python")
-st.write("☕ Java")
-st.write("💙 C Programming")
-st.write("🗄 SQL")
+with c1:
+    st.info("🐍 Python")
 
-st.markdown("---")
+with c2:
+    st.info("☕ Java")
 
-st.caption("Developed by Kalyani ❤️")
-st.markdown("""
-### 🚀 Why Choose CodeMaster?
+with c3:
+    st.info("💙 C")
 
-✅ Practice Programming Questions
+with c4:
+    st.info("🗄 SQL")
 
-✅ Improve Coding Skills
+st.write("")
 
-✅ Track Your Progress
+st.write("## 🏆 Features")
 
-✅ AI Explanations (Coming Soon)
+a,b,c = st.columns(3)
 
-✅ Earn Certificates (Coming Soon)
+with a:
+    st.success("🎯 Practice Coding")
 
-✅ Leaderboard (Coming Soon)
-""")
+with b:
+    st.warning("📈 Track Progress")
+
+with c:
+    st.error("🏅 Earn Certificates")
+
+st.write("---")
+
+st.caption("Made with ❤️ by Kalyani")
